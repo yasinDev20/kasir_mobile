@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
       darkTheme: _materialTheme.dark(),
       themeMode: ThemeMode.system,
 
-      builder: (context, child) => ProductPage(),
+      home: ProductPage(),
     );
   }
 }
