@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kasir_mobile/core/theme/theme.dart';
+import 'package:kasir_mobile/features/products/presentation/pages/add_product_page.dart';
 import 'package:kasir_mobile/features/products/presentation/pages/product_page.dart';
 
 void main() {
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
       darkTheme: _materialTheme.dark(),
       themeMode: ThemeMode.system,
 
-      home: ProductPage(),
+      home: AddProductPage(),
     );
   }
 }
