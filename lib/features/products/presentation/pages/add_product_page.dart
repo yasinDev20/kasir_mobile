@@ -16,6 +16,14 @@ class AddProductPage extends StatelessWidget {
               mainAxisSize: MainAxisSize.min,
               spacing: 16,
               children: [
+                IconButton(
+                  onPressed: () {},
+                  icon: Icon(
+                    size: 100,
+                    color: Theme.of(context).colorScheme.primaryContainer,
+                    Icons.add_photo_alternate_rounded,
+                  ),
+                ),
                 TextField(
                   decoration: InputDecoration(
                     labelText: 'Nama',
