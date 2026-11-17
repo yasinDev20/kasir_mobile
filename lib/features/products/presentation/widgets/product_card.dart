@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:go_router/go_router.dart';
+import 'package:kasir_mobile/config/routes/route_paths.dart';
 
 class ProductCard extends StatelessWidget {
   const new({super.key});
@@ -24,7 +26,10 @@ class ProductCard extends StatelessWidget {
                     Align(
                       alignment: AlignmentGeometry.topEnd,
                       child: IconButton.filledTonal(
-                        onPressed: () {},
+                        onPressed: () {
+                          context.pop();
+                          context.push(RoutePaths.productDetail);
+                        },
                         icon: Icon(Icons.edit),
                       ),
                     ),
@@ -35,18 +40,18 @@ class ProductCard extends StatelessWidget {
                         color: Theme.of(context).colorScheme.primaryContainer,
                         borderRadius: BorderRadius.circular(4),
                       ),
-                      child: Text('Dimsum mentai', style: Theme.of(context)
-                      .textTheme.labelLarge,),
+                      child: Text(
+                        'Dimsum mentai',
+                        style: Theme.of(context).textTheme.labelLarge,
+                      ),
                     ),
-                
+
                     //Textfield
                     TextField(
                       decoration: InputDecoration(border: OutlineInputBorder()),
                     ),
 
-                    SizedBox(
-                      height: 16,
-                    ),
+                    SizedBox(height: 16),
                     //Add Button
                     FilledButton.icon(
                       onPressed: () {},

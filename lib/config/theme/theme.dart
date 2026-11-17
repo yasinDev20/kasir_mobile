@@ -344,7 +344,7 @@ class MaterialTheme {
        bodyColor: colorScheme.onSurface,
        displayColor: colorScheme.onSurface,
      ),
-     scaffoldBackgroundColor: colorScheme.background,
+     scaffoldBackgroundColor: Colors.white,
      canvasColor: colorScheme.surface,
   );
 

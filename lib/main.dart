@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:kasir_mobile/core/theme/theme.dart';
-import 'package:kasir_mobile/features/products/presentation/pages/add_product_page.dart';
-import 'package:kasir_mobile/features/products/presentation/pages/product_page.dart';
+import 'package:kasir_mobile/config/di/injection.dart';
+import 'package:kasir_mobile/config/routes/routes.dart';
+import 'package:kasir_mobile/config/theme/theme.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  await injectionInit();
   runApp(const MyApp());
 }
 
@@ -14,13 +17,13 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       debugShowCheckedModeBanner: false,
       theme: _materialTheme.light(),
       darkTheme: _materialTheme.dark(),
       themeMode: ThemeMode.system,
-
-      home: AddProductPage(),
+      routerConfig: MyRouter.router,
+      builder: (context, child) => child!,
     );
   }
 }
